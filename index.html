@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="master.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title></title>
+    <link rel="icon" href="photos/fav-icon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <h1 id="header"></h1>
+    <div class="guess-game">
+      <div class="game-area">
+        <div class="inputs"></div>
+        <!-- inputs by JS -->
+        <div class="controls">
+          <button class="check">Check Word</button>
+          <button class="hints"></button>
+        </div>
+        <div class="message"></div>
+        <!--By js-->
+      </div>
+      <div class="key-colors">
+        <h2>Key Colors</h2>
+        <div class="key-color">
+          <div class="key in-place"></div>
+          <div class="key-text">Letter is correct and in place</div>
+        </div>
+        <div class="key-color">
+          <div class="key no-in-place"></div>
+          <div class="key-text">Letter is correct but not in place</div>
+        </div>
+        <div class="key-color">
+          <div class="key not"></div>
+          <div class="key-text">Letter is wrong and not Exist</div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      Created By
+      <span
+        ><a
+          href="https://www.linkedin.com/in/ahmed-elhosen-b493872a5/"
+          target="_blank"
+          >Ahmed Elhosen</a
+        ></span
+      >
+      With Love
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

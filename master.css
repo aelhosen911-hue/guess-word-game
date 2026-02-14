@@ -1,0 +1,288 @@
+/* Constant Rules */
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  font-family: "Montserrat", sans-serif;
+}
+:root {
+  --primary-color: #2df04a;
+}
+/* Constants Rules*/
+
+h1 {
+  text-align: center;
+  padding: 20px;
+  margin: 0 0 30px 0;
+  background-color: white;
+}
+.guess-game {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  display: flex;
+  margin: 20px auto;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+
+.guess-game .game-area {
+  width: 65%;
+  height: 100%;
+  text-align: center;
+}
+
+.guess-game .game-area .inputs input {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 30px;
+  margin: 5px;
+  caret-color: var(--primary-color);
+  background-color: white;
+  border: none;
+  border-bottom: 3px solid #333;
+}
+
+.guess-game .game-area .yes-in-place {
+  color: white;
+  background-color: var(--primary-color) !important;
+  border: var(--primary-color) !important;
+}
+
+.guess-game .game-area .no-in-place {
+  color: white;
+  background-color: #f8a72f !important;
+  border: #f8a72f !important;
+}
+
+.guess-game .game-area .not {
+  color: white;
+  background-color: rgb(255, 34, 0) !important;
+  border: rgb(255, 34, 0) !important;
+}
+
+.guess-game .game-area input:focus {
+  outline: none;
+}
+
+.guess-game .game-area .inputs span {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.key-colors {
+  width: 30%;
+}
+
+.key-colors .key-color {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+}
+
+.key-colors .key-color .key {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.key-colors .key-color .in-place {
+  background-color: var(--primary-color);
+}
+
+.key-colors .key-color .no-in-place {
+  background-color: #f8a72f;
+}
+
+.key-colors .key-color .not {
+  background-color: rgb(255, 34, 0);
+}
+
+/* game area */
+/* inputs */
+
+/* Controls  */
+.controls {
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls .check {
+  background-color: rgb(252, 83, 27);
+  border: none;
+  width: 70%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.controls .hints {
+  width: 25%;
+  background-color: #2692f8;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Win messsage  */
+.message-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.4s ease;
+}
+
+.message .success,
+.message .failure {
+  background: white;
+  padding: 40px 60px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  animation: zoomIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.message .success {
+  color: #28a745;
+}
+.message .failure {
+  color: #dc3545;
+}
+
+.message .success h2,
+.message .failure h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.message .success p,
+.message .failure p {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.message .play-again {
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.message .success .play-again {
+  background-color: #28a745;
+}
+.message .failure .play-again {
+  background-color: #dc3545;
+}
+
+.message .play-again:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Win messsage  */
+
+/* The Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+footer a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.disabled-input {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Responsive Rules */
+@media (max-width: 767px) {
+  .guess-game {
+    flex-direction: column;
+    align-items: center;
+  }
+  .guess-game .game-area {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .guess-game .game-area .inputs input {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+  }
+  .key-colors {
+    width: 100%;
+  }
+  .message .success,
+  .message .failure {
+    padding: 30px 20px;
+  }
+  .message .success h2,
+  .message .failure h2 {
+    font-size: 2rem;
+  }
+  .guess-game span {
+    font-size: 14px !important;
+  }
+  footer {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
